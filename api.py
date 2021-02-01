@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request, abort
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR']=True
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     info = {
         "mensaje" : "Bienvenido a la API de curriculum vitae de Jeremias Palacios.",
